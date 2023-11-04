@@ -2,12 +2,12 @@ import {Link} from 'react-router-dom'
 
 import Container from './Container'
 import styles from '../Navbar/Navbar.module.css'
-import logo from '../../imgs/logo.png'
+import logo from '../../imgs/logo1.png'
 
 
 function Navbar() {
     return (
-        <nav className={styles.Navbar}>
+        <nav className={styles.navbar}>
             <Container>
                 <Link to="/">
                     <img src={logo} alt="logo"/>
