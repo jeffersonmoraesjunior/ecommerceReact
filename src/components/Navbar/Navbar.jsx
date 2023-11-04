@@ -22,6 +22,7 @@ function Navbar() {
                     <li className={styles.item}> 
                     <Link to="/contatos">Contato</Link>
                     </li>
+                    <input type="text" placeholder="Search.." name="search"></input>
                 </ul>
             </Container>
         </nav>
