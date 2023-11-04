@@ -7,18 +7,21 @@ function Footer() {
         <footer className={styles.footer}>
             <ul className={styles.social_list}>
                 <li>
-                    <Facebook/>
+                    <FaFacebook/>
                 </li>
                 <li>
-                    <Instagram/>
+                    <FaInstagram/>
                 </li>
                 <li>
-                    <Linkedin/>
+                    <FaLinkedin/>
                 </li>
             </ul>
-            <p className={styles.copy_right}>
-                <span>LOGO</span> 2023
-            </p>
+            <ul>
+                <p className={styles.copy_right}>
+                    <span>ECOMMERCE GRUPO 2</span> © 2023
+                </p>
+            </ul>
+
         </footer>
     )
 }
