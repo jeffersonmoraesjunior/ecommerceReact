@@ -13,15 +13,15 @@ function Navbar() {
                 </Link>
                 <ul className={styles.list}>
                     <li className={styles.item}>
-                        <Link to="/">Home</Link>
+                        <Link to="/home">Home</Link>
                     </li>
                     <li className={styles.item}>
-                        <Link to="/listagem">Todos os Produtos</Link>
+                        <Link to="/products">All Products</Link>
                     </li>
                     <li className={styles.item}>
-                        <Link to="/contatos">Contato</Link>
+                        <Link to="/contacts">Contacts</Link>
                     </li>
-                    <input type="text" placeholder="Search.." name="search"></input>
+                    <input type="text" placeholder="Search..." name="search"></input>
                 </ul>
             </Container>
         </nav>
