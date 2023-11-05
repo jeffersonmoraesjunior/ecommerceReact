@@ -1,5 +1,11 @@
 {
-    "usuario": [
-      
-    ]
-  }
+  "usuario": [
+    {
+      "nome": "janaelson",
+      "email": "seuemail@email.com",
+      "senha": "suasenha",
+      "produtosSelecionados": [],
+      "id": 1
+    }
+  ]
+}

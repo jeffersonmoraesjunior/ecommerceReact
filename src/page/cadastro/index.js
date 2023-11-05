@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CadastraStyled } from './style';
 import { Link } from 'react-router-dom';
+import api, { salvarPessoa } from '../../services/apiusuario.js';
 
 const Cadastro = () => {
   const [nome, setNome] = useState('');
@@ -30,7 +31,7 @@ const Cadastro = () => {
       senha,
       produtosSelecionados,
     };
-
+    salvarPessoa(novoUsuario)
     // Redirecione para a página de login ou para onde você desejar após o cadastro.
     navigate('/');
   };
