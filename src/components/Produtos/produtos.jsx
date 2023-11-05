@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { FaShoppingCart, FaRegBookmark, FaStar, FaFireAlt } from 'react-icons/fa';
 import api from '../../services/api';
-import './body.css';
+import './produtos.css';
 
-const Body = () => {
+const Produtos = () => {
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 6; // Número de produtos por página
@@ -31,7 +31,7 @@ const Body = () => {
 
     return (
         <>
-            <div className="Body">
+            <div className="Produtos">
                 {productsToDisplay.map((product) => (
                     <div className="productList">
                         <div key={product.id} className="productCard">
@@ -76,4 +76,4 @@ const Body = () => {
     );
 };
 
-export default Body;
+export default Produtos;
