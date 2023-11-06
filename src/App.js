@@ -1,16 +1,10 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 
-
-
-export default function App(){
-    return(
+export default function App() {
+    return (
         <>
-        <Outlet >
-            
-
-        </Outlet>
-        
+            <Outlet />
         </>
     );
 }
