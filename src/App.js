@@ -1,17 +1,16 @@
-import { BrowserRouter } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
-import Container from './components/Navbar/Container';
-import FooterContainer from './components/Footer/index';
+import React from "react";
+import { Outlet } from "react-router-dom";
 
-function App() {
-    return (
+
+
+export default function App(){
+    return(
         <>
-            <BrowserRouter>
-                <Navbar />
-                <FooterContainer />
-            </BrowserRouter>
+        <Outlet >
+            
+
+        </Outlet>
+        
         </>
     );
 }
-
-export default App;
