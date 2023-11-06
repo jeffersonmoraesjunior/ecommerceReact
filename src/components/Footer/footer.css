@@ -3,7 +3,7 @@
 }
 
 .footer {
-    background-color: #2d2d32;    
+    background-color: #2d2d32;
     margin-bottom: 0;
 }
 
@@ -33,7 +33,7 @@
 }
 
 a {
-     color: rgb(175, 175, 179);
+    color: rgb(175, 175, 179);
     text-decoration: none;
 }
 
@@ -67,7 +67,7 @@ a {
 
 .sb__footer-below-links {
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
 }
 
 .sb__footer-below-links p {
@@ -133,12 +133,3 @@ hr {
         line-height: 38px;
     }
 }
-
-
-
-
-
-
-
-
-

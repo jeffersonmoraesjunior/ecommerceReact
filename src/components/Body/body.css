@@ -1,0 +1,16 @@
+.products {
+    justify-content: center;
+    display: flex;
+}
+
+.productPrice {
+    font-size: 25px;
+}
+
+.productImage {
+    width: 15%;
+}
+
+.productTitle {
+    font-size: 1.2em;
+}

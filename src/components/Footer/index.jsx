@@ -11,31 +11,28 @@ const Footer = () => {
             <div className="sb__footer section__padding">
                 <div className="sb__footer-links">
                     <div className="sb__footer-links_div">
-                        <h4>Dúvidas</h4>
+                        <h4>May We Help You?</h4>
                         <a href="/">
-                            <p>Fala Empresas</p>
+                            <p>Contact Us</p>
                         </a>
                         <a href="/">
-                            <p>Contato</p>
+                            <p>FAQs</p>
                         </a>
                         <a href="/">
-                            <p>Termos de uso</p>
+                            <p>Location</p>
                         </a>
                     </div>
                     <div className="sb__footer-links_div">
                         <h4>Resource</h4>
-                        <a href="/">
-                            <p>Sobre</p>
+                        <a href="/about">
+                            <p>About</p>
                         </a>
                         <a href="/">
                             <p>Blog</p>
                         </a>
-                        <a href="/">
-                            <p>Contato</p>
-                        </a>
                     </div>
                     <div className="sb__footer-links_div">
-                        <h4>Nossas Redes Sociais</h4>
+                        <h4>Our Social Media</h4>
                         <div className="socialmedia">
                             <p>
                                 <img src={fb} alt="" />
@@ -58,24 +55,24 @@ const Footer = () => {
                 <div className="sb__footer-below">
                     <div className="sb__footer-copyright">
                         <p>
-                            {new Date().getFullYear()} © Copyright 2020. Todos os direitos
-                            reservados do Grupo 2 🚀.
+                            {new Date().getFullYear()} © Copyright 2020. All rights reserved. Made
+                            by Group 2 🚀
                         </p>
                     </div>
                     <div className="sb__footer-below-links">
-                        <a href="/termos-servicos">
+                        <a href="/terms-and-services">
                             <div>
-                                <p>Termos e Serviços</p>
+                                <p>Terms and Services</p>
                             </div>
                         </a>
-                        <a href="/politicas-de-privacidade">
+                        <a href="/privacy-policy">
                             <div>
-                                <p>Politicas de Privacidade</p>
+                                <p>Privacy Policy</p>
                             </div>
                         </a>
                         <a href="/cookies">
                             <div>
-                                <p>Declarações de Cookies</p>
+                                <p>Cookies Settings</p>
                             </div>
                         </a>
                     </div>

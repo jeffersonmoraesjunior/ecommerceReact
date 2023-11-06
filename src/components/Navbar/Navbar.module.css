@@ -1,8 +1,12 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    background-color: #2D2D32;
+    background-color: #2d2d32;
     padding: 1em;
+}
+
+.logo {
+    width: 10rem;
 }
 
 .list {
@@ -15,8 +19,8 @@
     margin-right: 2em;
 }
 
-.item a{
-    color: #FFF;
+.item a {
+    color: #fff;
     text-decoration: none;
 }
 
