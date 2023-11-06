@@ -5,4 +5,9 @@ const api = axios.create({
     // outra api: https://fake-ecommerce-api.netlify.app/docs
 });
 
+<<<<<<< HEAD
 export default api;
+=======
+export default api;
+
+>>>>>>> 98e7ada9eb13af70c9e95ddfcae66f794c668faa

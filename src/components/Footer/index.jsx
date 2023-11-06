@@ -55,7 +55,11 @@ const Footer = () => {
                 <div className="sb__footer-below">
                     <div className="sb__footer-copyright">
                         <p>
+<<<<<<< HEAD
                             {new Date().getFullYear()} © Copyright 2020. All rights reserved. Made by Group 2 🚀
+=======
+                            {new Date().getFullYear()} © Copyright 2020. All rights reserved from Group 2 🚀.
+>>>>>>> 98e7ada9eb13af70c9e95ddfcae66f794c668faa
                         </p>
                     </div>
                     <div className="sb__footer-below-links">

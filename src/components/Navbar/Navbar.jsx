@@ -13,10 +13,14 @@ function Navbar() {
                 </Link>
                 <ul className={styles.list}>
                     <li className={styles.item}>
-                        <Link to="/">Home</Link>
+                        <Link to="/home">Home</Link>
                     </li>
                     <li className={styles.item}>
+<<<<<<< HEAD
                         <Link to="/products">All Products</Link>
+=======
+                        <Link to="/home/products">All Products</Link>
+>>>>>>> 98e7ada9eb13af70c9e95ddfcae66f794c668faa
                     </li>
                     <li className={styles.item}>
                         <Link to="/contacts">Contacts</Link>
