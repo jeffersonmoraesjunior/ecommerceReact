@@ -14,15 +14,13 @@ export const LoginStyled = styled.div`
         margin-top: 20px;
         font-size: 50px;
     }
-    form{
+    div{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        width: 100%;
         margin-top: 20px;
         input{
-            width: 75%;
+            width: 50%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid black;
@@ -34,12 +32,18 @@ export const LoginStyled = styled.div`
             margin: 10px 0;
             border: 1px solid black;
             border-radius: 5px;
-            background-color: #b8c0ff;
+            background-color: #555c97;
             color: white;
         }
         button:hover{
-            background-color: #b8c0ff;
+            background-color: #454862;
             color: white;
+        }
+    }
+    p{
+        color: #454862;
+        a{
+            color: blue;
         }
     }
 `

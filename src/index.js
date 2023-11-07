@@ -9,23 +9,28 @@ import CreateUser from './pages/cadastro';
 import Home from './pages/home/index';
 
 import Produtos from './components/Produtos/produtos';
-import Product from './pages/product/index';
+import Product from './pages/productSingle/index';
 import Errorpages from './pages/Error';
 import About from './pages/about/about';
+import { UserProvider } from './context';
+import Cart from './pages/carrinho';
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <App />,
-        errorElement: <Errorpages />,
+        element: <App />,       
         children: [
             {
                 path: '/',
                 element: <Home />
             },
             {
-                path: '/cadastro',
+                path: '/sign-up',
                 element: <CreateUser />
+            },
+            {
+                path: '/sign-in',
+                element: <Login />
             },
             {
                 path: '/products',
@@ -38,11 +43,19 @@ const router = createBrowserRouter([
             {
                 path: '/about',
                 element: <About />
+            },
+            {
+                path: '/cart',
+                element: <Cart />
+            },
+            {
+                path: '/*',
+                element: <Errorpages />
             }
         ]
     },
     {
-        path: '/home',
+        path: '/',
         element: <Home />,
         children: []
     }
@@ -51,7 +64,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <GlobalStyle />
-        <RouterProvider router={router} />
+        <UserProvider>
+            <GlobalStyle />
+            <RouterProvider router={router} />
+        </UserProvider>
     </React.StrictMode>
 );

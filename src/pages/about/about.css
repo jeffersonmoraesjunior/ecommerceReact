@@ -1,5 +1,73 @@
-/* .body {
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+/* .descricao-site {
+    padding: 80px 50px 50px 50px;
+    font-size: 18px;
+    text-align: justify;
+    font-weight: bold;
+    font-style: italic;
 } */
-.makers {
-    color: #000;
+
+.integrantes {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: #DD3B30;
+    padding-bottom: 8px;
+}
+
+.pessoas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 10px;
+    padding: 0 20px;
+}
+
+.foto {
+    height: 205px;
+    border-radius: 50%;
+}
+
+.redes-sociais img{
+    width: 60px;
+    display: inline;
+    border-radius: 50%;
+    margin: 20px 7px 0px 0px;
+}
+
+.pessoa {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border-radius: 103px;
+    background-color: #64c259;
+}
+
+.pessoa-lado {
+    display: flex;
+    flex-direction: column;
+}
+
+.pessoa-info {
+    text-align: center;
+    font-size: 24px;
+}
+
+.pessoa-info h2 {
+    padding-top: 5px;
+}
+
+.descricao {
+    font-style: italic;
+    font-size: 22px;
+}
+
+hr {
+    color: #333333;
 }

@@ -6,6 +6,13 @@
       "senha": "suasenha",
       "produtosSelecionados": [],
       "id": 1
+    },
+    {
+      "nome": "jeff",
+      "email": "jeffersonjuniormoraes@gmail.com",
+      "senha": "123",
+      "produtosSelecionados": [],
+      "id": 2
     }
   ]
 }

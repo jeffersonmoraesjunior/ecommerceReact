@@ -1,5 +1,7 @@
 import Axios from 'axios';
 
+
+//RODAR O TERMINAL PARA SERVIDOR: " json-server --watch -p 8080 db.json "
 const api = Axios.create({
     baseURL: 'http://localhost:8080', // Substitua pela URL da sua API
     timeout: 10000 // Tempo limite das solicitações em milissegundos
@@ -10,15 +12,18 @@ export default api;
 export const editarPessoa = async (usuario) => {
     console.log(usuario, 'Edit');
     try {
-        const data = await api.put(`/lista/${usuario.id}`, usuario);
+        // const data = await api.put(`/list/${usuario.id}`, usuario);
     } catch (error) {}
 };
 
 export const listarPessoa = async () => {
-    const response = await api.get(`/usuario`).then(response.data);
+    let response = null; // Inicialize como null
     try {
-        const response = await api.get(`/usuario`).then(response.data);
-    } catch (error) {}
+        response = await api.get('/usuario');
+         // Para acessar os dados, use response.data
+    } catch (error) {
+        console.error(error);
+    }
     return response;
 };
 

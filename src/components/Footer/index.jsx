@@ -12,13 +12,13 @@ const Footer = () => {
                 <div className="sb__footer-links">
                     <div className="sb__footer-links_div">
                         <h4>May We Help You?</h4>
-                        <a href="/">
+                        <a href='#'>
                             <p>Contact Us</p>
                         </a>
-                        <a href="/">
+                        <a href='#'>
                             <p>FAQs</p>
                         </a>
-                        <a href="/">
+                        <a href='#'>
                             <p>Location</p>
                         </a>
                     </div>
@@ -27,25 +27,25 @@ const Footer = () => {
                         <a href="/about">
                             <p>About</p>
                         </a>
-                        <a href="/">
+                        <a href='#'>
                             <p>Blog</p>
                         </a>
                     </div>
                     <div className="sb__footer-links_div">
                         <h4>Our Social Media</h4>
                         <div className="socialmedia">
-                            <p>
-                                <img src={fb} alt="" />
-                            </p>
-                            <p>
-                                <img src={linkedin} alt="" />
-                            </p>
-                            <p>
-                                <img src={instagram} alt="" />
-                            </p>
-                            <p>
-                                <img src={youtube} alt="" />
-                            </p>
+                            <a href='https://facebook.com' target="_blank" rel="noopener noreferrer">
+                                <p><img src={fb} alt="" /></p>
+                            </a>
+                            <a href='https://linkedin.com' target="_blank" rel="noopener noreferrer">
+                                <p><img src={linkedin} alt=""  /></p>
+                            </a>
+                            <a href='https://instagram.com' target="_blank" rel="noopener noreferrer">
+                                <p><img src={instagram} alt=""  /></p>
+                            </a>
+                            <a href='https://youtube.com' target="_blank" rel="noopener noreferrer">
+                                <p><img src={youtube} alt=""  /></p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -60,17 +60,17 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="sb__footer-below-links">
-                        <a href="/terms-and-services">
+                        <a href="#">
                             <div>
                                 <p>Terms and Services</p>
                             </div>
                         </a>
-                        <a href="/privacy-policy">
+                        <a href="#">
                             <div>
                                 <p>Privacy Policy</p>
                             </div>
                         </a>
-                        <a href="/cookies">
+                        <a href="#">
                             <div>
                                 <p>Cookies Settings</p>
                             </div>

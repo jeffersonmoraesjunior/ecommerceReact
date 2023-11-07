@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { FaShoppingCart, FaRegBookmark, FaStar, FaFireAlt } from 'react-icons/fa';
+import { FaShoppingCart, FaRegBookmark, FaFireAlt } from 'react-icons/fa';
 import api from '../../services/api';
 import './produtos.css';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import FooterContainer from '../Footer/index';
 import Navbar from '../Navbar/Navbar';
 
@@ -15,7 +15,6 @@ const Produtos = () => {
         try {
             const response = await api.get('/products');
             setProducts(response.data);
-            console.log(response.data); //puxa os arrays no console
         } catch (error) {
             console.log(error);
         }
@@ -39,7 +38,7 @@ const Produtos = () => {
             <Navbar />
             <div className="Produtos">
                 {productsToDisplay.map((product) => (
-                    <div className="productList">
+                    <div className="productList" key={product.id}>
                         <div key={product.id} className="productCard">
                             <FaShoppingCart className={'productCard__cart'} />
                             <FaRegBookmark className={'productCard__wishlist'} />
@@ -48,7 +47,7 @@ const Produtos = () => {
                             <img src={product.image} alt="" className="productImage" />
 
                             <div className="productCart__content">
-                                <h3 className="productName">{product.title.substring(0, 15)}...</h3>
+                                <h3 className="productName">{product.title.substring(0, 20)}</h3>
 
                                 <div className="displayStack__1">
                                     <div className="productPrice">${product.price}</div>
@@ -58,7 +57,7 @@ const Produtos = () => {
                                         ⭐{product.rating.rate} ({product.rating.count})
                                     </div>
                                     <Link to={`/products/${product.id}`} className="btn_comprar">
-                                        Comprar
+                                        Buy
                                     </Link>
                                 </div>
                             </div>

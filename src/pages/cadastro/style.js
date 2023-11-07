@@ -28,18 +28,24 @@ export const CadastraStyled = styled.div`
             border: 1px solid black;
             border-radius: 5px;
         }
-        button {
+        button{
             width: 50%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid black;
             border-radius: 5px;
-            background-color: #b8c0ff;
+            background-color: #555c97;
             color: white;
         }
-        button:hover {
-            background-color: #b8c0ff;
+        button:hover{
+            background-color: #454862;
             color: white;
+        }
+        p{
+        color: #454862;
+        a{
+            color: blue;
+        }
         }
     }
 `;

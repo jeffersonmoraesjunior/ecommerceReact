@@ -4,10 +4,8 @@ import Container from './Container';
 import styles from '../Navbar/Navbar.module.css';
 import logo from '../../assets/images/logo1.png';
 import login from '../../assets/images/login.png';
-import { useUser } from '../../context/index';
 
-function Navbar() {
-    const { user } = useUser();
+function Navbar2() {
     return (
         <nav className={styles.navbar}>
             <Container>
@@ -19,18 +17,12 @@ function Navbar() {
                         <Link to="/">Home</Link>
                     </li>
                     <li className={styles.item}>
-                        <Link to="/products">All Products</Link>
-                    </li>
-                    <li className={styles.item}>
                         <Link to="/contacts">Contacts</Link>
                     </li>
-                    <li>                        
-                        <Link to="/sign-in">                            
+                    <li>
+                        <Link to="/sign-in">
                             <img src={login} alt="" />
                         </Link>
-                    </li>
-                    <li className={styles.item}>
-                        <h3> {user}</h3>
                     </li>
                 </ul>
             </Container>
@@ -38,4 +30,4 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default Navbar2;
