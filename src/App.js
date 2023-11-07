@@ -5,7 +5,6 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { WhatsApp } from './components/ButtonWhatsApp/WhatsApp';
 
-
 export default function App() {
     return (
         <>
