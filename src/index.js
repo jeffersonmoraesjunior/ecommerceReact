@@ -8,7 +8,7 @@ import Login from './pages/login';
 import CreateUser from './pages/cadastro';
 import Home from './pages/home/index';
 
-import Produtos from './components/Produtos/produtos';
+import ProdutosAll from './pages/productAll/index';
 import Product from './pages/productSingle/index';
 import Errorpages from './pages/Error';
 import About from './pages/about/about';
@@ -18,7 +18,7 @@ import Cart from './pages/carrinho';
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <App />,       
+        element: <App />,
         children: [
             {
                 path: '/',
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/products',
-                element: <Produtos />
+                element: <ProdutosAll />
             },
             {
                 path: '/products/:id',

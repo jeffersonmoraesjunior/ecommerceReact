@@ -7,9 +7,11 @@ import Navbar2 from '../../components/Navbar/Navbar2';
 import Container from '../../components/Navbar/Container';
 import FooterContainer from '../../components/Footer/index';
 
-document.title = 'Sign Up | Serracommerce'
 
 const Cadastro = () => {
+
+    document.title = 'Sign Up | Serracommerce'
+    
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
@@ -22,21 +24,20 @@ const Cadastro = () => {
             alert('Please fill in the field: "Name"!');
             return;
         }
-        // Verifique se o email já existe
-        const response = await listarPessoa(); // Aguarde a resposta da função listarPessoa
-        const userData = response.data; // Suponho que os dados do usuário estejam em response.data
+        
+        const response = await listarPessoa(); 
+        const userData = response.data; 
       
         const user = userData.find((user) => user.email === email);
       
         if (user && user.email === email) {
-          // Se o email já existir, exiba uma mensagem de erro e não prossiga com o cadastro
+          
           alert('Email already exists. Choose another email!');
         } else {
           if (senha !== confirmarSenha) {
             alert('Passwords do not match. Try again!');
           } else {
-            // Aqui, você pode enviar os dados do usuário e os produtos selecionados para o servidor ou armazená-los localmente.
-            // Exemplo:
+            
             const novoUsuario = {
               nome,
               email,
@@ -44,9 +45,9 @@ const Cadastro = () => {
               produtosSelecionados
             };
             try {
-              // Salve o novo usuário
+              
               salvarPessoa(novoUsuario);
-              navigate('/sign-in');
+              
             } catch (error) {
               console.error('Error to save user: ', error);
             }
@@ -56,7 +57,7 @@ const Cadastro = () => {
       };
 
     const handleAdicionarProduto = (produto) => {
-        // Aqui, você pode adicionar lógica para adicionar produtos à lista de produtos selecionados.
+        
         setProdutosSelecionados([...produtosSelecionados, produto]);
     };
 

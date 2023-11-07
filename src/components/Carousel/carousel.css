@@ -1,0 +1,6 @@
+.carousel .slide img {
+    width: 100%;
+    height: auto;
+    max-width: 1920px;
+    max-height: 1080px;
+}

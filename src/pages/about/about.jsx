@@ -10,9 +10,11 @@ import rayan from '../../assets/images/rayan.jpeg';
 import renan from '../../assets/images/renan.jpeg';
 import './about.css';
 
-document.title = 'About Us | Serracommerce'
 
 function About() {
+
+    document.title = 'About Us | Serracommerce'
+    
     return (
         <>
             <Navbar2 />

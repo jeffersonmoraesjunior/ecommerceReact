@@ -1,13 +1,22 @@
 import React from 'react';
-import { useRouteError } from 'react-router-dom';
+import { Link, useRouteError} from "react-router-dom";
+import { ErrorStyled } from "./style";
 
-export default function ErrorPages() {
-    const error = useRouteError();
+export default function ErrorPage() {
+    
+    document.title = '404 | Serracommerce';
 
+    const  error  = useRouteError();
     return (
-        <div className="error-page">
-            <h1>404 - Page Not Found</h1>
-            <p>Sorry, the page that you are searching, do not exists...</p>
+        <ErrorStyled>
+        <div className = "errotop">
         </div>
+            <h1 className="erro404">404</h1>
+            <h1 className="error">Error </h1>
+            <h1 className="erropage">Page Not Found!</h1>
+            <button className="errobutton"><Link to="/">Back To Home</Link></button>
+        <div className = "errobot">
+        </div>
+        </ErrorStyled>
     );
-};
+}

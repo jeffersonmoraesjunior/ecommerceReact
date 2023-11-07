@@ -1,3 +1,12 @@
+.title-product-all {
+    margin: 0 auto;
+}
+
+#buttonPages {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
 .Produtos {
     display: grid;
     grid-template-columns: 20rem 20rem 20rem;

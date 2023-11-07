@@ -3,8 +3,6 @@ import { FaShoppingCart, FaRegBookmark, FaFireAlt } from 'react-icons/fa';
 import api from '../../services/api';
 import './produtos.css';
 import { Link } from 'react-router-dom';
-import FooterContainer from '../Footer/index';
-import Navbar from '../Navbar/Navbar';
 
 const Produtos = () => {
     const [products, setProducts] = useState([]);
@@ -35,38 +33,45 @@ const Produtos = () => {
 
     return (
         <>
-            <Navbar />
-            <div className="Produtos">
-                {productsToDisplay.map((product) => (
-                    <div className="productList" key={product.id}>
-                        <div key={product.id} className="productCard">
-                            <FaShoppingCart className={'productCard__cart'} />
-                            <FaRegBookmark className={'productCard__wishlist'} />
-                            <FaFireAlt className={'productCard__fastSelling'} />
+            <div className="title-product-all">
+                <h2 className="text-center">Latest Products</h2>
+                <hr />
+                <div className="Produtos">
+                    {productsToDisplay.map((product) => (
+                        <div className="productList" key={product.id}>
+                            <div key={product.id} className="productCard">
+                                <FaShoppingCart className={'productCard__cart'} />
+                                <FaRegBookmark className={'productCard__wishlist'} />
+                                <FaFireAlt className={'productCard__fastSelling'} />
 
-                            <img src={product.image} alt="" className="productImage" />
+                                <img src={product.image} alt="" className="productImage" />
 
-                            <div className="productCart__content">
-                                <h3 className="productName">{product.title.substring(0, 20)}</h3>
-
-                                <div className="displayStack__1">
-                                    <div className="productPrice">${product.price}</div>
-                                </div>
-                                <div className="displayStack__2">
-                                    <div className="productRating">
-                                        ⭐{product.rating.rate} ({product.rating.count})
+                                <div className="productCart__content">
+                                    <h3 className="productName">
+                                        {product.title.substring(0, 20)}
+                                    </h3>                                   
+                                    
+                                    <div className="displayStack__1">
+                                        <div className="productPrice">R$ {product.price}</div>
                                     </div>
-                                    <Link to={`/products/${product.id}`} className="btn_comprar">
-                                        Buy
-                                    </Link>
+                                    <div className="displayStack__2">
+                                        <div className="productRating">
+                                            ⭐{product.rating.rate} ({product.rating.count})
+                                        </div>
+                                        <Link
+                                            to={`/products/${product.id}`}
+                                            className="btn_comprar">
+                                            Buy
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
             {/* Botões de navegação para ir para a página anterior ou próxima */}
-            <div className="buttonPages">
+            <div className="buttonPages" id="buttonPages">
                 <>
                     <button
                         onClick={() => setCurrentPage(currentPage - 1)}
@@ -80,7 +85,6 @@ const Produtos = () => {
                     </button>
                 </>
             </div>
-            <FooterContainer />
         </>
     );
 };

@@ -13,24 +13,21 @@ const Footer = () => {
                 <div className="sb__footer-links">
                     <div className="sb__footer-links_div">
                         <h4>May We Help You?</h4>
-                        <a href="/">
-                            <p>Contact Us</p>
-                        </a>
-                        <a href="/">
+                        <a href="#">
                             <p>FAQs</p>
                         </a>
-                        <a href="/">
-                            <p>Location</p>
+                        <a href="#">
+                            <p>Blog</p> 
                         </a>
                         <Translator />
                     </div>
                     <div className="sb__footer-links_div">
                         <h4>Resource</h4>
-                        <a href="/about">
-                            <p>About</p>
+                        <a href="#">
+                            <p>Contact Us</p>
                         </a>
-                        <a href="/">
-                            <p>Blog</p>
+                        <a href="#">
+                            <p>Location</p>
                         </a>
                     </div>
                     <div className="sb__footer-links_div">
@@ -79,17 +76,17 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="sb__footer-below-links">
-                        <a href="/">
+                        <a href="#">
                             <div>
                                 <p>Terms and Services</p>
                             </div>
                         </a>
-                        <a href="/">
+                        <a href="#">
                             <div>
                                 <p>Privacy Policy</p>
                             </div>
                         </a>
-                        <a href="/">
+                        <a href="#">
                             <div>
                                 <p>Cookies Settings</p>
                             </div>

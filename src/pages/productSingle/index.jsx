@@ -8,57 +8,41 @@ import './styles.css';
 import Navbar from '../../components/Navbar/Navbar';
 import FooterContainer from '../../components/Footer/index';
 
-import Cart from '../carrinho';
-
 const Produto = () => {
     const { id } = useParams(useState);
     const [product, setProduct] = useState([]);
 
-    const [state, setState] = useState({
-        api: api,
-        cart: []
-    });
+    // const [state, setState] = useState({
+    //     api: api,
+    //     cart: []
+    // });
 
-    //funcao para add ao carrinho de compras
-    // const addToCart = (produto) => {
+    // const increase = (produto) => {
     //     setState({
     //         ...state,
-    //         cart: state.cart.find((cartItem) => cartItem.id === produto.id)
-    //             ? state.cart.map((cartItem) =>
-    //                   cartItem.id === produto.id
-    //                       ? { ...cartItem, count: cartItem.count + 1 }
-    //                       : cartItem
-    //               )
-    //             : [...state.cart, { ...produto, count: 1 }]
+    //         cart: state.cart.map((cartItem) =>
+    //             cartItem.id === produto.id ? { ...cartItem, count: cartItem.count + 1 } : cartItem
+    //         )
     //     });
     // };
 
-    const increase = (produto) => {
-        setState({
-            ...state,
-            cart: state.cart.map((cartItem) =>
-                cartItem.id === produto.id ? { ...cartItem, count: cartItem.count + 1 } : cartItem
-            )
-        });
-    };
+    // const decrease = (produto) => {
+    //     setState({
+    //         ...state,
+    //         cart: state.cart.map((cartItem) =>
+    //             cartItem.id === produto.id
+    //                 ? { ...cartItem, count: cartItem.count > 1 ? cartItem.count - 1 : 1 }
+    //                 : cartItem
+    //         )
+    //     });
+    // };
 
-    const decrease = (produto) => {
-        setState({
-            ...state,
-            cart: state.cart.map((cartItem) =>
-                cartItem.id === produto.id
-                    ? { ...cartItem, count: cartItem.count > 1 ? cartItem.count - 1 : 1 }
-                    : cartItem
-            )
-        });
-    };
-
-    const removeItem = (id) => {
-        setState({
-            ...state,
-            cart: state.cart.filter((cartItem) => cartItem.id !== id)
-        });
-    };
+    // const removeItem = (id) => {
+    //     setState({
+    //         ...state,
+    //         cart: state.cart.filter((cartItem) => cartItem.id !== id)
+    //     });
+    // };
 
     const salvarProduct = async (data) => {
         try {
@@ -73,7 +57,7 @@ const Produto = () => {
     };
 
     //calcula o numero total de itens no carrinho de compras
-    const cartItemCount = state.cart.reduce((acc, data) => (acc += data.count), 0);
+    // const cartItemCount = state.cart.reduce((acc, data) => (acc += data.count), 0);
 
     useEffect(() => {
         const getProduct = async () => {
@@ -91,6 +75,8 @@ const Produto = () => {
         getProduct();
     }, [id]);
 
+    document.title = 'Item | Serracommerce';
+
     return (
         <>
             <Navbar />
@@ -105,15 +91,13 @@ const Produto = () => {
                             {product ? product?.category?.toUpperCase() : null}
                         </h4>
                         <h1 className="product__title">{product.title}</h1>
-                        <p className="lead">
-                            ⭐{product.rating && product.rating.rate} <i className="fa fa-star"></i>
-                        </p>
-                        <h3 className="product__price">R${product.price}</h3>
+                        <p className="lead">⭐{product.rating && product.rating.rate} Avaliações</p>
+                        <h3 className="product__price">R$ {product.price}</h3>
                         <p className="lead">{product.description}</p>
                         <button
                             onClick={() => {
                                 salvarProduct(product);
-                                alert('Produto Added');
+                                alert('Product Added');
                             }}
                             className="btn_compra btn_add_carrinho">
                             Add to Cart

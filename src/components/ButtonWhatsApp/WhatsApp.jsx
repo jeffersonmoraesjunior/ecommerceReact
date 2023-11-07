@@ -4,12 +4,13 @@ import './styles.css';
 export const WhatsApp = () => {
     return (
         <>
-            <a
+            <div
                 className="whatsapp-link"
                 href="https://web.whatsapp.com/send?phone=5521"
-                target="_blank" rel="noreferrer" >                
+                target="_blank"
+                rel="noreferrer">
                 <i className="fa fa-whatsapp"></i>
-            </a>
+            </div>
         </>
     );
 };

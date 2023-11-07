@@ -9,9 +9,11 @@ import FooterContainer from '../../components/Footer/index';
 import api, { listarPessoa } from '../../services/apiusuario';
 import { useUser } from '../../context';
 
-document.title = 'Sign In | Serracommerce';
 
 const Login = () => {
+    
+    document.title = 'Sign In | Serracommerce';
+
     const [usuario, setUsuario] = useState('janaelson');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

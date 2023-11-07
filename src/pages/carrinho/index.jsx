@@ -36,7 +36,7 @@ const Cart = () => {
         (total, product) => total + product.price * product.quantity,
         0
     );
-    const shipping = 40; // valor do frete
+    const shipping = 18; // valor do frete
     const totalAmount = totalPrice + shipping;
 
     const removeProduct = async (id) => {
@@ -111,13 +111,13 @@ const Cart = () => {
                                         </li>
                                         <li className="list-group-item">
                                             <p>Shipping</p>
-                                            <span>${shipping.toFixed(2)}</span>
+                                            <span>R${shipping.toFixed(2)}</span>
                                         </li>
                                         <li className="list-group-item">
                                             <div>
                                                 <strong>Total</strong>
                                             </div>
-                                            <span>${totalAmount.toFixed(2)}</span>
+                                            <span>R${totalAmount.toFixed(2)}</span>
                                         </li>
                                     </ul>
                                 </div>
