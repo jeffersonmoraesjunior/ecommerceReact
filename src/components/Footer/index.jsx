@@ -4,6 +4,7 @@ import linkedin from '../../assets/images/linkedin.png';
 import instagram from '../../assets/images/instagram.png';
 import youtube from '../../assets/images/youtube.png';
 import './footer.css';
+import Translator from '../../services/translator';
 
 const Footer = () => {
     return (
@@ -12,39 +13,57 @@ const Footer = () => {
                 <div className="sb__footer-links">
                     <div className="sb__footer-links_div">
                         <h4>May We Help You?</h4>
-                        <a href='#'>
+                        <a href="/">
                             <p>Contact Us</p>
                         </a>
-                        <a href='#'>
+                        <a href="/">
                             <p>FAQs</p>
                         </a>
-                        <a href='#'>
+                        <a href="/">
                             <p>Location</p>
                         </a>
+                        <Translator />
                     </div>
                     <div className="sb__footer-links_div">
                         <h4>Resource</h4>
                         <a href="/about">
                             <p>About</p>
                         </a>
-                        <a href='#'>
+                        <a href="/">
                             <p>Blog</p>
                         </a>
                     </div>
                     <div className="sb__footer-links_div">
                         <h4>Our Social Media</h4>
                         <div className="socialmedia">
-                            <a href='https://facebook.com' target="_blank" rel="noopener noreferrer">
-                                <p><img src={fb} alt="" /></p>
+                            <a
+                                href="https://facebook.com"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <p>
+                                    <img src={fb} alt="" />
+                                </p>
                             </a>
-                            <a href='https://linkedin.com' target="_blank" rel="noopener noreferrer">
-                                <p><img src={linkedin} alt=""  /></p>
+                            <a
+                                href="https://linkedin.com"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <p>
+                                    <img src={linkedin} alt="" />
+                                </p>
                             </a>
-                            <a href='https://instagram.com' target="_blank" rel="noopener noreferrer">
-                                <p><img src={instagram} alt=""  /></p>
+                            <a
+                                href="https://instagram.com"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <p>
+                                    <img src={instagram} alt="" />
+                                </p>
                             </a>
-                            <a href='https://youtube.com' target="_blank" rel="noopener noreferrer">
-                                <p><img src={youtube} alt=""  /></p>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                                <p>
+                                    <img src={youtube} alt="" />
+                                </p>
                             </a>
                         </div>
                     </div>
@@ -60,17 +79,17 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="sb__footer-below-links">
-                        <a href="#">
+                        <a href="/">
                             <div>
                                 <p>Terms and Services</p>
                             </div>
                         </a>
-                        <a href="#">
+                        <a href="/">
                             <div>
                                 <p>Privacy Policy</p>
                             </div>
                         </a>
-                        <a href="#">
+                        <a href="/">
                             <div>
                                 <p>Cookies Settings</p>
                             </div>

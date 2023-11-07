@@ -22,7 +22,7 @@ function Navbar() {
                         <Link to="/products">All Products</Link>
                     </li>
                     <li className={styles.item}>
-                        <Link to="/contacts">Contacts</Link>
+                        <Link to="/about">Contacts</Link>
                     </li>
                     <li>                        
                         <Link to="/sign-in">                            

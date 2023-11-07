@@ -1,5 +1,6 @@
 import Axios from 'axios';
 
+//https://mockapi.io/projects/654948b1dd8ebcd4ab247038
 const api = Axios.create({
     baseURL: 'https://654948b1dd8ebcd4ab247037.mockapi.io/trabalhoFinalReact', // Substitua pela URL da sua API
     timeout: 10000 // Tempo limite das solicitações em milissegundos
